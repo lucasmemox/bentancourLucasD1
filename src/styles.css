@@ -8,4 +8,9 @@
 .centrar {
   width: 300px !important;
   margin: 0px auto !important;
+  padding: 8px;
+}
+
+.centrar a {
+  text-decoration:none;
 }
