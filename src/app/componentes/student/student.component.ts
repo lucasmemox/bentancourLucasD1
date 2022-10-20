@@ -10,14 +10,14 @@ import { Alumno } from 'src/app/models/alumno';
 export class StudentComponent implements OnInit {
 // DESAFIO 2
   listaAlumnos: Array<Alumno> = [
-    {id: 1, nombre: 'Lautaro',apellido: 'Martinez', curso: 'Angular',  edad: 25, dni: 2233345},
-    {id: 2, nombre: 'Emiliano',apellido: 'Martinez', curso: 'Angular', edad: 30 , dni: 2233345},
-    {id: 3, nombre: 'Lionel',apellido: 'Messi', curso: 'Angular', edad: 35 , dni: 2233345},
-    {id: 4, nombre: 'Rodrigo',apellido: 'De Paul', curso: 'Angular', edad: 28, dni: 2233345},
-    {id: 5, nombre: 'Angel',apellido: 'Di Maria', curso: 'Angular', edad: 34, dni: 2233345},
-    {id: 6, nombre: 'Paulo',apellido: 'Dybala', curso: 'Angular',edad: 28, dni: 2233345},
-    {id: 7, nombre: 'Alejandro',apellido: 'Gomez', curso: 'Angular', edad: 34, dni: 2233345},
-    {id: 8, nombre: 'Joaquin',apellido: 'Correa', curso: 'Angular', edad: 28, dni: 2233345}
+    {id: 1, nombre: 'Dave',apellido: 'Mustaine', curso: 'Angular',  edad: 25, dni: 2233345},
+    {id: 2, nombre: 'Dani',apellido: 'Filth', curso: 'Desarrollo Web', edad: 30 , dni: 2233345},
+    {id: 3, nombre: 'Joey',apellido: 'Belladona', curso: 'JavaScript', edad: 35 , dni: 2233345},
+    {id: 4, nombre: 'Max',apellido: 'Cavalera', curso: 'Angular', edad: 28, dni: 2233345},
+    {id: 5, nombre: 'Matt',apellido: 'Barlow', curso: 'Desarrollo Web', edad: 34, dni: 2233345},
+    {id: 6, nombre: 'Bob',apellido: 'Reid', curso: 'JavaScript',edad: 28, dni: 2233345},
+    {id: 7, nombre: 'Mile',apellido: 'Petrozza', curso: 'Angular', edad: 34, dni: 2233345},
+    {id: 8, nombre: 'Marcel',apellido: 'Schirmer', curso: 'Desarrollo Web', edad: 28, dni: 2233345}
   ];
   constructor() { }
 
