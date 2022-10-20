@@ -8,7 +8,7 @@ import { Alumno } from 'src/app/models/alumno';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-
+// DESAFIO 2
   listaAlumnos: Array<Alumno> = [
     {id: 1, nombre: 'Lautaro',apellido: 'Martinez', curso: 'Angular',  edad: 25, dni: 2233345},
     {id: 2, nombre: 'Emiliano',apellido: 'Martinez', curso: 'Angular', edad: 30 , dni: 2233345},
