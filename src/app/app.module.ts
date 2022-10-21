@@ -8,6 +8,8 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { StudentComponent } from './componentes/student/student.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { FormularioUsuarioComponent } from './componentes/formulario-usuario/formulario-usuario.component';
+import { FormularioAlumnoComponent } from './componentes/formulario-alumno/formulario-alumno.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
     NavbarComponent,
     ToolbarComponent,
     StudentComponent,
-    FooterComponent
+    FooterComponent,
+    FormularioUsuarioComponent,
+    FormularioAlumnoComponent
   ],
   imports: [
     BrowserModule
