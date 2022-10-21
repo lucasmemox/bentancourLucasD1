@@ -10,6 +10,9 @@ import { StudentComponent } from './componentes/student/student.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { FormularioUsuarioComponent } from './componentes/formulario-usuario/formulario-usuario.component';
 import { FormularioAlumnoComponent } from './componentes/formulario-alumno/formulario-alumno.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { FormularioAlumnoComponent } from './componentes/formulario-alumno/formu
     FormularioAlumnoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
