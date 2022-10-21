@@ -36,9 +36,9 @@ export class FormularioAlumnoComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
-
   cambiarCurso(e: any) {}
+
+  ngOnInit(): void {}
 
   agregarAlumno() {
     this.dialogRef.close(this.formularioAlumno.value);
