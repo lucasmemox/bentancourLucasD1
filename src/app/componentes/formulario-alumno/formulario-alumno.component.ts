@@ -21,7 +21,7 @@ export class FormularioAlumnoComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.formularioAlumno = fb.group({
-      id: new FormControl(''),
+
       nombre: new FormControl('', [Validators.required]),
       apellido: new FormControl('', [Validators.required]),
       curso: new FormControl('', [Validators.required]),
