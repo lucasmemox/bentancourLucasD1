@@ -44,7 +44,7 @@ export class StudentComponent implements OnInit {
   openDialog() {
     let dialog = this.dialog.open(FormularioAlumnoComponent, {
       width: '50%',
-      height: '50%',
+      height: '80%',
 
     });
 
