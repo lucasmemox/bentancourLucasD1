@@ -3,7 +3,7 @@
 <button (click)="openDialog()" type="button" class="btn btn-primary">Agregar Alumno</button>
 </div>
 <!-- DESAFIO 2 -->
-<table  class="table table-hover">
+<!-- <table  mat-table [dataSource]="dataSource" class="table table-hover">
   <thead>
     <tr class="table-primary">
       <th scope="col">Id</th>
@@ -16,7 +16,8 @@
   </thead>
   <tbody>
     <ng-container *ngFor="let alumno of listaAlumnos">
-    <!-- <tr class="table-dark" *ngFor="let alumno of listaAlumnos"> -->
+    <ng-container *ngFor="let alumno">
+     <tr class="table-dark" *ngFor="let alumno of listaAlumnos">
       <tr class="table-dark" *ngIf="alumno.apellido !== 'Belladona' && alumno.edad > 30">
         <th scope="row">{{ alumno.id }}</th>
         <td>{{ alumno.nombre }}</td>
@@ -41,7 +42,54 @@
         <td>{{ alumno.edad }}</td>
         <td>{{ alumno.dni }}</td>
       </tr>
-    <!-- </tr> -->
+     </tr>
   </ng-container>
   </tbody>
+</table> -->
+<table  mat-table [dataSource]="dataSource" class="table table-hover col-md-12">
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef appCabeceraLetra>Nombre</th>
+    <td mat-cell *matCellDef="let alumno">{{ alumno.nombre }}</td>
+</ng-container>
+
+<!-- 'apellido' -->
+<ng-container matColumnDef="apellido">
+    <th mat-header-cell *matHeaderCellDef>Apellido</th>
+    <td mat-cell *matCellDef="let alumno">{{ alumno.apellido }}</td>
+</ng-container>
+
+<!-- 'profesor' -->
+<ng-container matColumnDef="curso">
+    <th mat-header-cell *matHeaderCellDef appCabeceraLetra >Curso</th>
+    <td mat-cell *matCellDef="let alumno">{{ alumno.curso }}</td>
+</ng-container>
+
+<!-- 'fechaInicio' -->
+<ng-container matColumnDef="edad">
+    <th mat-header-cell *matHeaderCellDef appCabeceraLetra>Edad</th>
+    <td mat-cell *matCellDef="let alumno">{{ alumno.edad }}</td>
+</ng-container>
+
+<!-- 'fechaFin' -->
+<ng-container matColumnDef="dni">
+    <th mat-header-cell *matHeaderCellDef appCabeceraLetra>DNI</th>
+    <td mat-cell *matCellDef="let alumno">{{ alumno.dni }}</td>
+</ng-container>
+
+
+<!-- 'acciones' -->
+<ng-container matColumnDef="acciones">
+    <th mat-header-cell *matHeaderCellDef appCabeceraLetra>Operación</th>
+    <td mat-cell *matCellDef="let alumno">
+        <button mat-icon-button>
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="borrar(alumno.id)">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </td>
+</ng-container>
+
+<tr mat-header-row *matHeaderRowDef="columnas"></tr>
+<tr mat-row *matRowDef="let row; columns: columnas"></tr>
 </table>
