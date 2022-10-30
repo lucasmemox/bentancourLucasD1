@@ -13,6 +13,7 @@ import { FormularioAlumnoComponent } from './componentes/formulario-alumno/formu
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
+import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MaterialModule } from './material.module';
     StudentComponent,
     FooterComponent,
     FormularioUsuarioComponent,
-    FormularioAlumnoComponent
+    FormularioAlumnoComponent,
+    BooleanoTextoPipe
   ],
   imports: [
     BrowserModule,

@@ -53,12 +53,21 @@ export class StudentComponent implements OnInit {
     this.dataSource.data = this.alumnos;
   }
 
+  filtrarApellido(event: Event){
+    const filtro = (event.target as HTMLInputElement).value;
+    this.dataSource.filterPredicate = function(alumnos: Alumno, filtro: String){
+      return alumnos.apellido.toLowerCase().includes(filtro.toLocaleLowerCase());
+    };
+    this.dataSource.filter = filtro.trim().toLocaleLowerCase();
+  }
+
   openDialog() {
     let dialog = this.dialog.open(FormularioAlumnoComponent, {
       width: '50%',
       height: '80%',
 
     });
+
 
     dialog.beforeClosed().subscribe(res => {
       //console.log(res);
