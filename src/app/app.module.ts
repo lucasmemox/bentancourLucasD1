@@ -8,6 +8,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { StudentComponent } from './componentes/student/student.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { CursosComponent } from './componentes/cursos/cursos.component';
 import { FormularioUsuarioComponent } from './componentes/formulario-usuario/formulario-usuario.component';
 import { FormularioAlumnoComponent } from './componentes/formulario-alumno/formulario-alumno.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +23,7 @@ import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
     NavbarComponent,
     ToolbarComponent,
     StudentComponent,
+    CursosComponent,
     FooterComponent,
     FormularioUsuarioComponent,
     FormularioAlumnoComponent,
