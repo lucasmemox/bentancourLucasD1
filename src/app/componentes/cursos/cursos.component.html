@@ -9,7 +9,7 @@
 
 <div class="row">
 
-  <div *ngfor="let curso of cursos" class="col-md-3">
+  <div *ngFor="let curso of cursos$ | async" class="col-md-3">
     <mat-card>
       <mat-card-header>
         <mat-card-title>{{curso.nombre}}</mat-card-title>

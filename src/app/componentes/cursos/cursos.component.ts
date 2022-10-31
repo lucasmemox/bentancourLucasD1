@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Curso } from 'src/app/models/curso';
 import { Observable } from 'rxjs';
 import { CursoService } from 'src/app/servicios/curso.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cursos',
