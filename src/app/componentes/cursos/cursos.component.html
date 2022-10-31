@@ -1,1 +1,39 @@
-<p>cursos works!</p>
+<p>Cursos de Cursalia</p>
+
+<div class="row">
+  <mat-form-field class="col-md-6">
+    <mat-label>Filtro Curso</mat-label>
+    <!-- <input type="text" matInput (keyup)="filtrarCurso($event)"> -->
+  </mat-form-field>
+</div>
+
+<div class="row">
+
+  <div *ngfor="let curso of cursos" class="col-md-3">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{curso.nombre}}</mat-card-title>
+        <mat-card-subtitle>{{curso.comision}}</mat-card-subtitle>
+      </mat-card-header>
+
+      <img mat-card-image [src]="curso.imagen" alt="Cursalia">
+
+      <mat-card-content>
+        <p>Profesor: {{curso.profesor}}</p>
+        <p>Comienza: {{curso.fechaInicio | date: 'dd/MM/YYYY'}}</p>
+        <p>Finaliza: {{curso.fechaFin | date: 'dd/MM/YYYY'}}</p>
+        <p [appEstiloBoleano]="curso.inscripcionAbierta"> Finaliza: {{curso.inscripcionAbierta | booleanoTexto: 'SI': 'NO'}}</p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-icon-button color="primario">
+          <mat-icon>border_color</mat-icon>
+        </button>
+        <button mat-icon-button color="secunadario">
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>

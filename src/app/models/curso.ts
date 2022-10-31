@@ -5,4 +5,5 @@ export interface Curso{
   fechaInicio: Date;
   fechaFin: Date;
   inscripcionAbierta: boolean;
+  imagen: string;
 }

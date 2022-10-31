@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
+import { EstiloBoleanoDirective } from './directivas/estilo-boleano.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
     FooterComponent,
     FormularioUsuarioComponent,
     FormularioAlumnoComponent,
-    BooleanoTextoPipe
+    BooleanoTextoPipe,
+    EstiloBoleanoDirective
   ],
   imports: [
     BrowserModule,

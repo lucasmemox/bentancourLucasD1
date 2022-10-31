@@ -9,6 +9,7 @@ export class Datos {
         fechaInicio: new Date(2022, 8, 9),
         fechaFin: new Date(2022, 10, 9),
         inscripcionAbierta: false,
+        imagen: './assets/imagenes/angular-curso.png',
     },
     {
       nombre : 'Desarrollo Web',
@@ -17,6 +18,7 @@ export class Datos {
       fechaInicio: new Date(2022, 10, 9),
       fechaFin: new Date(2022, 11, 9),
       inscripcionAbierta: true,
+      imagen: './assets/imagenes/desWeb-curso.png',
     },
     {
       nombre : 'JavaScript',
@@ -25,7 +27,7 @@ export class Datos {
       fechaInicio: new Date(2022, 9, 9),
       fechaFin: new Date(2022, 10, 9),
       inscripcionAbierta: false,
-
+      imagen: './assets/imagenes/javascr-curso.png',
     },
     {
       nombre : 'Angular',
@@ -34,6 +36,7 @@ export class Datos {
       fechaInicio: new Date(2022, 9, 9),
       fechaFin: new Date(2022, 11, 9),
       inscripcionAbierta: false,
+      imagen: './assets/imagenes/angular-curso.png',
   },
   {
     nombre : 'Desarrollo Web',
@@ -42,6 +45,7 @@ export class Datos {
     fechaInicio: new Date(2022, 10, 9),
     fechaFin: new Date(2022, 11, 9),
     inscripcionAbierta: true,
+    imagen: './assets/imagenes/desWeb-curso.png',
   },
   {
     nombre : 'JavaScript',
@@ -50,6 +54,7 @@ export class Datos {
     fechaInicio: new Date(2022, 10, 9),
     fechaFin: new Date(2022, 12, 9),
     inscripcionAbierta: false,
+    imagen: './assets/imagenes/javascr-curso.png',
   },
   ];
 }
