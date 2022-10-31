@@ -3,6 +3,7 @@ import { Curso } from '../models/curso';
 export class Datos {
   static cursos: Curso[] = [
     {
+        id: 1,
         nombre : 'Angular',
         comision: '32566',
         profesor: 'Miško Hevery',
@@ -12,6 +13,7 @@ export class Datos {
         imagen: './assets/imagenes/angular-curso.png',
     },
     {
+      id: 2,
       nombre : 'Desarrollo Web',
       comision: '32567',
       profesor: 'Pascar Edgardo',
@@ -21,6 +23,7 @@ export class Datos {
       imagen: './assets/imagenes/desWeb-curso.png',
     },
     {
+      id: 3,
       nombre : 'JavaScript',
       comision: '32568',
       profesor: 'Migueles Matias',
@@ -30,6 +33,7 @@ export class Datos {
       imagen: './assets/imagenes/javascr-curso.png',
     },
     {
+      id: 4,
       nombre : 'Angular',
       comision: '32566',
       profesor: 'Sebastian Andrade',
@@ -39,6 +43,7 @@ export class Datos {
       imagen: './assets/imagenes/angular-curso.png',
   },
   {
+    id: 5,
     nombre : 'Desarrollo Web',
     comision: '32567',
     profesor: 'Zardalevich Alejandro',
@@ -48,6 +53,7 @@ export class Datos {
     imagen: './assets/imagenes/desWeb-curso.png',
   },
   {
+    id: 6,
     nombre : 'JavaScript',
     comision: '32568',
     profesor: 'Arellano Jhonatan',
