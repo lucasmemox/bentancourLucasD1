@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
 import { EstiloBoleanoDirective } from './directivas/estilo-boleano.directive';
+import { FiltroCursosPipe } from './pipes/filtro-cursos.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EstiloBoleanoDirective } from './directivas/estilo-boleano.directive';
     FormularioUsuarioComponent,
     FormularioAlumnoComponent,
     BooleanoTextoPipe,
-    EstiloBoleanoDirective
+    EstiloBoleanoDirective,
+    FiltroCursosPipe
   ],
   imports: [
     BrowserModule,

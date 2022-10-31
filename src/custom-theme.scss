@@ -86,7 +86,7 @@ $bentancourLucasD1-theme: mat.define-light-theme((
     --bs-highlight-bg: #fdebd0;
   }
 
-.mat-table {
+.mat-table, .mat-card{
   --bs-table-color: var(--bs-body-color);
   --bs-table-bg: transparent;
   --bs-table-border-color: var(--bs-border-color);
@@ -116,7 +116,7 @@ $bentancourLucasD1-theme: mat.define-light-theme((
   vertical-align: bottom;
 }
 
-.mat-table-primary {
+.mat-table-primary, .mat-card-primary {
   --bs-table-color: #fff;
   --bs-table-bg: #2c3e50;
   --bs-table-border-color: #415162;
@@ -130,7 +130,7 @@ $bentancourLucasD1-theme: mat.define-light-theme((
   border-color: var(--bs-table-border-color);
 }
 
-.mat-table-secondary {
+.mat-table-secondary, .mat-card-secundary {
   --bs-table-color: #fff;
   --bs-table-bg: #95a5a6;
   --bs-table-border-color: #a0aeaf;
