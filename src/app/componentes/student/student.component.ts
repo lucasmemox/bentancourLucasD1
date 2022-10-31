@@ -15,24 +15,13 @@ export class StudentComponent implements OnInit {
 
   alumnos!: Alumno[]
   // alumnos: Alumno[] = Datos.alumnos;
-  columnas: string[] = ['nombre', 'apellido','curso', 'edad', 'dni', 'acciones'];
+  // columnas: string[] = ['nombre', 'apellido','curso', 'edad', 'dni', 'acciones'];
+  columnas: string[] = ['nombre', 'curso', 'edad', 'dni', 'acciones'];
   // dataSource: MatTableDataSource<Alumno> = new MatTableDataSource<Alumno>(this.alumnos);
   dataSource!: MatTableDataSource<Alumno>;
   suscripcion: any;
 
   constructor(private dialog: MatDialog, private alumnoService :  AlumnoService) { }
-
-// DESAFIO 2
-  // listaAlumnos: Array<Alumno> = [
-  //   {id: 1, nombre: 'Dave',apellido: 'Mustaine', curso: 'Angular',  edad: 25, dni: 2233345},
-  //   {id: 2, nombre: 'Dani',apellido: 'Filth', curso: 'Desarrollo Web', edad: 30 , dni: 2233345},
-  //   {id: 3, nombre: 'Joey',apellido: 'Belladona', curso: 'JavaScript', edad: 35 , dni: 2233345},
-  //   {id: 4, nombre: 'Max',apellido: 'Cavalera', curso: 'Angular', edad: 28, dni: 2233345},
-  //   {id: 5, nombre: 'Matt',apellido: 'Barlow', curso: 'Desarrollo Web', edad: 34, dni: 2233345},
-  //   {id: 6, nombre: 'Bob',apellido: 'Reid', curso: 'JavaScript',edad: 28, dni: 2233345},
-  //   {id: 7, nombre: 'Mile',apellido: 'Petrozza', curso: 'Angular', edad: 34, dni: 2233345},
-  //   {id: 8, nombre: 'Marcel',apellido: 'Schirmer', curso: 'Desarrollo Web', edad: 28, dni: 2233345}
-  // ];
 
   ngOnInit(): void {
     this.suscripcion = this.alumnoService.obtenerAlumnos().subscribe(datos =>{

@@ -17,6 +17,7 @@ import { MaterialModule } from './material.module';
 import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
 import { EstiloBoleanoDirective } from './directivas/estilo-boleano.directive';
 import { FiltroCursosPipe } from './pipes/filtro-cursos.pipe';
+import { ConcatenarApeNomPipe } from './pipes/concatenar-ape-nom.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FiltroCursosPipe } from './pipes/filtro-cursos.pipe';
     FormularioAlumnoComponent,
     BooleanoTextoPipe,
     EstiloBoleanoDirective,
-    FiltroCursosPipe
+    FiltroCursosPipe,
+    ConcatenarApeNomPipe
   ],
   imports: [
     BrowserModule,
