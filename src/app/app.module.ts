@@ -18,6 +18,7 @@ import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
 import { EstiloBoleanoDirective } from './directivas/estilo-boleano.directive';
 import { FiltroCursosPipe } from './pipes/filtro-cursos.pipe';
 import { ConcatenarApeNomPipe } from './pipes/concatenar-ape-nom.pipe';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ConcatenarApeNomPipe } from './pipes/concatenar-ape-nom.pipe';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

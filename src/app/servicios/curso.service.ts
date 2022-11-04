@@ -3,7 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Curso } from '../models/curso';
 import { Datos } from '../datos/cursos';
 
-@Injectable({
+@Injectable({ 
   providedIn: 'root'
 })
 export class CursoService {
