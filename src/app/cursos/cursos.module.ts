@@ -9,6 +9,8 @@ import { ConcatenarApeNomPipe } from './pipes/concatenar-ape-nom.pipe';
 import { EstiloBoleanoDirective } from './directivas/estilo-boleano.directive';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CursoService } from './servicios/curso.service';
+import { AgregarCursoComponent } from './componentes/agregar-curso/agregar-curso.component';
+import { EditarCursoComponent } from './componentes/editar-curso/editar-curso.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { CursoService } from './servicios/curso.service';
     BooleanoTextoPipe,
     FiltroCursosPipe,
     ConcatenarApeNomPipe,
-    EstiloBoleanoDirective
+    EstiloBoleanoDirective,
+    AgregarCursoComponent,
+    EditarCursoComponent
   ],
   imports: [
     CommonModule,
