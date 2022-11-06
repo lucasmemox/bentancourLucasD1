@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Curso } from 'src/app/models/curso';
+import { Curso } from 'src/app/cursos/models/curso';
 import { Observable } from 'rxjs';
-import { CursoService } from 'src/app/servicios/curso.service';
+import { CursoService } from 'src/app/cursos/servicios/curso.service';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({

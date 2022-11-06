@@ -12,13 +12,105 @@
 }
 
 .centrar a {
-  text-decoration:none;
+  text-decoration: none;
 }
 
-.btn-altalu{
+.btn-altalu {
   border-bottom: 10px;
   padding: 20px;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.div-contacto-img-local {
+  width: 200%;
+  /* Sin ancho no puedo centrar la imagen */
+  max-width: 480px;
+  /* Máximo ancho posible para el para la imagen */
+  margin: 0 auto;
+  /* Centro la imagen */
+  margin-top: 20px;
+  /*Separo la imagen del Main*/
+
+  border-radius: 12px;
+  border-color: antiquewhite;
+  border-style: solid;
+  border-width: 9px;
+  box-shadow: 5px 6px 7px 0px grey;
+}
+
+.div-contacto-img-local img {
+  height: 250px;
+  width: 460px;
+  align-self: center;
+}
+
+.contacto-banner {
+  width: 400px;
+  height: auto;
+  text-align: center;
+  line-height: 30px;
+  margin: 5px;
+  /*Separo las cajas*/
+  margin-left: 90px;
+  margin-right: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.mapa-contacto {
+  width: 500px;
+  height: auto;
+  text-align: center;
+  line-height: 60px;
+  margin: 5px;
+  /*Separo las cajas*/
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.titulo-conoceme {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  /*Para que se posicionen abajo cuando no entran*/
+  flex-direction: row;
+  /*pongo en fila*/
+  position: relative;
+  justify-content: space-evenly;
+  /*trabaja a nivel de fila la separación*/ }
+
+  .titulo-conoceme h2 {
+    margin-bottom: 30px;
+    /*separo el h2 del contenido*/
+    color: #153a4e;
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 0 auto;
+    /* Centro */
+    margin-top: 20px;
+    text-align: center;
+    text-shadow: 2px 2px white; }
+
+    .texto-conoceme p{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        line-height: 2em;
+        hyphens: auto;
+        word-wrap: break-word;
+        word-break: break-word;
+        text-align: left;
+        /*Separación entre lineas de un párrafo*/
+
+    }
