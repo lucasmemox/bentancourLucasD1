@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
 
 import { NavbarComponent } from './core/componentes/navbar/navbar.component';
-import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
+import { ToolbarComponent } from './core/componentes/toolbar/toolbar.component';
 import { StudentComponent } from './componentes/student/student.component';
 import { FooterComponent } from './core/componentes/footer/footer.component';
 import { CursosComponent } from './cursos/componentes/listar-cursos/cursos.component';
@@ -27,17 +27,9 @@ import { QuienesSomosComponent } from './core/componentes/quienes-somos/quienes-
     AppComponent,
     NavbarComponent,
     ToolbarComponent,
-    // LoginComponent,
-
     StudentComponent,
     FooterComponent,
-    //  FormularioUsuarioComponent,
-    FormularioAlumnoComponent,
-    //QuienesSomosComponent
-    // ContactoComponent,
-    // PaginaNoEncontradaComponent,
-    // InicioComponent
-
+    FormularioAlumnoComponent
   ],
   imports: [
     BrowserModule,

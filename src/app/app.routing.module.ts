@@ -4,11 +4,13 @@ import { ContactoComponent } from './core/componentes/contacto/contacto.componen
 import { InicioComponent } from './core/componentes/inicio/inicio.component';
 import { PaginaNoEncontradaComponent } from './core/componentes/pagina-no-encontrada/pagina-no-encontrada.component';
 import { QuienesSomosComponent } from './core/componentes/quienes-somos/quienes-somos.component';
+import { CursosComponent } from './cursos/componentes/listar-cursos/cursos.component';
 
 const rutas: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'quienes-somos', component: QuienesSomosComponent },
+  { path: 'cursos', component: CursosComponent },
   { path: '', redirectTo: 'inicio', pathMatch: 'full'},
   { path: '**', component: PaginaNoEncontradaComponent }
 ]
