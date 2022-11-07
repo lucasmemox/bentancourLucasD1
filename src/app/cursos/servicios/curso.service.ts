@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { Curso } from '../models/curso';
 import { Datos } from '../datos/cursos';
 
@@ -17,4 +17,22 @@ export class CursoService {
     return this.cursosSubject.asObservable();
   }
 
+  obtenerCurso(id: number): Observable<Curso[]>{
+    return this.obtenerCursos().pipe(
+      map((cursos: Curso[]) => this.cursos.filter((Curso: Curso) => Curso.id === id))
+    )
+  }
+
+  agregarCurso(curso: Curso){
+    this.cursos.push(curso);
+    this.cursosSubject.next(this.cursos);
+  }
+
+  editarCurso(curso: Curso){
+
+  }
+
+  eliminarCurso(id: number){
+
+  }
 }

@@ -1,1 +1,52 @@
-<p>agregar-curso works!</p>
+<h2>Agregar Curso</h2>
+
+<form>
+  <div class="row">
+
+    <div class="col-md-4">
+      <mat-form-field appearence="fill" class="llenadoPagina">
+        <mat-label>Curso</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+
+    <div class class="col-md-4">
+      <mat-form-field appearence="fill" class="llenadoPagina">
+        <mat-label>Comision</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-4">
+      <mat-form-field appearence="fill" class="llenadoPagina">
+        <mat-label>Profesor</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-4">
+      <mat-form-field appearance="fill" class="llenadoPagina">
+        <mat-label>Comienza</mat-label>
+        <input matInput [matDatepicker]="fechaInicio">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="fechaInicio"></mat-datepicker-toggle>
+        <mat-datepicker #fechaInicio></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-4">
+      <mat-form-field appearance="fill" class="llenadoPagina">
+        <mat-label>Finaliza</mat-label>
+        <input matInput [matDatepicker]="fechaFin">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="fechaFin"></mat-datepicker-toggle>
+        <mat-datepicker #fechaFin></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-4" class="llenadoPagina">
+      <mat-slide-toggle>Inscripción Abierta</mat-slide-toggle>
+    </div>
+
+  </div>
+</form>
