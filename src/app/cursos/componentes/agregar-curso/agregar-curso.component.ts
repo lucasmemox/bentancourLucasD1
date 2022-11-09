@@ -1,36 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CursoService } from '../../servicios/curso.service';
 import { Curso } from '../../models/curso';
-import { Router } from '@angular/router';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-agregar-curso',
   templateUrl: './agregar-curso.component.html',
-  styleUrls: ['./agregar-curso.component.css']
+  styleUrls: ['./agregar-curso.component.css'],
 })
-export class AgregarCursoComponent implements OnInit {
 
+export class AgregarCursoComponent implements OnInit {
   formulario: FormGroup;
 
   constructor(
     private CursoService: CursoService,
-    private router: Router
+    public dialogRef: MatDialogRef<AgregarCursoComponent>
   ) {
     this.formulario = new FormGroup({
-      nombre : new FormControl(),
-      comision: new FormControl(),
+      nombre: new FormControl('',[Validators.required]),
+      comision: new FormControl('',[Validators.required]),
       profesor: new FormControl(),
-      fechaInicio: new FormControl(),
-      fechaFin: new FormControl(),
-      inscripcionAbierta: new FormControl()
+      fechaInicio: new FormControl('',[Validators.required]),
+      fechaFin: new FormControl('',[Validators.required]),
+      inscripcionAbierta: new FormControl('',[Validators.required]),
     });
-   }
+  }
 
-   agregarCurso(){
+  ngOnInit(): void {}
 
+  agregarCurso() {
     const curso: Curso = {
-      id: Math.round(Math.random()*1000),
+      id: Math.round(Math.random() * 1000),
       nombre: this.formulario.value.nombre,
       comision: this.formulario.value.comision,
       profesor: this.formulario.value.profesor,
@@ -41,10 +42,13 @@ export class AgregarCursoComponent implements OnInit {
     };
 
     this.CursoService.agregarCurso(curso);
-    this.router.navigate(['cursos'])
+    this.dialogRef.close();
   }
 
-  ngOnInit(): void {
+  cancelar()
+  {
+    this.dialogRef.close()
   }
+
 
 }

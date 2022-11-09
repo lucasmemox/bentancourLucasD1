@@ -5,6 +5,7 @@ import { CursoService } from 'src/app/cursos/servicios/curso.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { AgregarCursoComponent } from '../agregar-curso/agregar-curso.component';
 
 @Component({
   selector: 'app-cursos',
@@ -21,6 +22,7 @@ export class ListarCursosComponent implements OnInit {
   ngOnInit(): void {
     this.cursos$ = this.cursoService.obtenerCursos();
   }
+
   filtrarCurso(event: Event){
     const filtro = (event.target as HTMLInputElement).value;
     this.dataSource.filterPredicate = function(cursos: Curso, filtro: String){
@@ -29,8 +31,27 @@ export class ListarCursosComponent implements OnInit {
     this.dataSource.filter = filtro.trim().toLocaleLowerCase();
   }
 
-  agregarCurso(curso: Curso){
-    this.router.navigate(['listar/agregarcu', curso]);
+  openDialog() {
+    let dialog = this.dialog.open(AgregarCursoComponent, {
+      width: '50%',
+      height: '80%',
+
+    });
+
+    // dialog.beforeClosed().subscribe(res => {
+    //   //console.log(res);
+    //   if(res != null || res != undefined)
+    //   {
+    //     this.cursos$.push(
+    //       {
+    //         ...res,
+    //         id:this.cursos$.length+1
+    //       }
+    //     );
+    //     this.dataSource.data = this.cursos$;
+    //   }
+    // });
+
   }
 
 }

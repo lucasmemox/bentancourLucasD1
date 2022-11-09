@@ -7,6 +7,10 @@
   </mat-form-field>
 </div>
 
+<div class="btn-altalu">
+  <button mat-raised-button (click)="openDialog()" type="button" class="btn btn-primary">Agregar Curso</button>
+</div>
+
 <div class="row">
 
   <div *ngFor="let curso of cursos$ | async" class="col-md-4">
@@ -33,7 +37,7 @@
         <button mat-icon-button color="secundario">
           <mat-icon>delete_forever</mat-icon>
         </button>
-       </mat-card-actions>
+      </mat-card-actions>
     </mat-card>
   </div>
 
