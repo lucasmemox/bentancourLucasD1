@@ -15,7 +15,7 @@
   text-decoration: none;
 }
 
-.btn-altalu {
+.btn-altalu,.btn-altacur {
   border-bottom: 10px;
   padding: 20px;
 }
