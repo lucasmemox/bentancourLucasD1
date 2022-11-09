@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CursosRoutingModule } from './cursos-routing.module';
-import { CursosComponent } from './componentes/listar-cursos/cursos.component';
+import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos.component';
 import { MaterialModule } from '../material.module';
 import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
 import { FiltroCursosPipe } from './pipes/filtro-cursos.pipe';
@@ -15,7 +15,7 @@ import { EditarCursoComponent } from './componentes/editar-curso/editar-curso.co
 
 @NgModule({
   declarations: [
-    CursosComponent,
+    ListarCursosComponent,
     BooleanoTextoPipe,
     FiltroCursosPipe,
     ConcatenarApeNomPipe,

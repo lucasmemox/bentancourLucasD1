@@ -6,10 +6,10 @@ import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-cursos',
-  templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css']
+  templateUrl: './listar-cursos.component.html',
+  styleUrls: ['./listar-cursos.component.css']
 })
-export class CursosComponent implements OnInit {
+export class ListarCursosComponent implements OnInit {
 
   cursos$!: Observable<Curso[]>
   dataSource!: MatTableDataSource<Curso>;
