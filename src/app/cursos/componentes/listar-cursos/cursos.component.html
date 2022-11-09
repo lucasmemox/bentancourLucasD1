@@ -22,18 +22,24 @@
         <p>Profesor: {{curso.profesor}}</p>
         <p>Comienza: {{curso.fechaInicio | date: 'dd/MM/YYYY'}}</p>
         <p>Finaliza: {{curso.fechaFin | date: 'dd/MM/YYYY'}}</p>
-        <p [appEstiloBoleano]="curso.inscripcionAbierta"> Finalizado: {{curso.inscripcionAbierta | booleanoTexto: 'SI': 'NO'}}</p>
+        <p [appEstiloBoleano]="curso.inscripcionAbierta"> Finalizado: {{curso.inscripcionAbierta | booleanoTexto: 'SI':
+          'NO'}}</p>
       </mat-card-content>
 
       <mat-card-actions align="end">
         <button mat-icon-button color="primario">
           <mat-icon>border_color</mat-icon>
         </button>
-        <button mat-icon-button color="secunadario">
+        <button mat-icon-button color="secundario">
           <mat-icon>delete_forever</mat-icon>
         </button>
+        <button mat-icon-button routerLink="agregar_curso" color="secundario">
+          <mat-icon>add_box</mat-icon>
+        </button>
+
       </mat-card-actions>
     </mat-card>
   </div>
 
 </div>
+<router-outlet></router-outlet>
