@@ -3,8 +3,8 @@ import { Alumno } from 'src/app/models/alumno';
 import { Datos } from 'src/app/datos/alumnos';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
-import { FormularioAlumnoComponent } from '../formulario-alumno/formulario-alumno.component';
 import { AlumnoService } from 'src/app/servicios/alumno.service';
+import { FormularioAlumnoComponent } from '../formulario-alumno/formulario-alumno.component';
 
 @Component({
   selector: 'app-student',
