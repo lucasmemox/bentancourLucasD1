@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Alumno } from 'src/app/models/alumno';
-import { Datos } from 'src/app/datos/alumnos';
+import { Alumno } from 'src/app/alumnos/models/alumno';
+import { Datos } from '../../datos/alumnos';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
-import { AlumnoService } from 'src/app/servicios/alumno.service';
+import { AlumnoService } from 'src/app/alumnos/servicios/alumno.service';
 import { FormularioAlumnoComponent } from '../formulario-alumno/formulario-alumno.component';
 
 @Component({
