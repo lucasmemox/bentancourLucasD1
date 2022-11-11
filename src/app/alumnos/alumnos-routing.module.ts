@@ -8,7 +8,7 @@ const rutas: Routes = [
 
      ]},
 
-    // { path: 'editar', component: EditarCursoComponent }
+    // { path: 'alumnos', component: StudentComponent }
 ];
 
 @NgModule({

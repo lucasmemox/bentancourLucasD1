@@ -23,7 +23,7 @@ import { AlumnosModule } from './alumnos/alumnos.module';
     BrowserAnimationsModule,
     CoreModule,
     CursosModule,
-    // AlumnosModule,
+    AlumnosModule,
     SharedModule,
     AppRoutingModule
   ],
