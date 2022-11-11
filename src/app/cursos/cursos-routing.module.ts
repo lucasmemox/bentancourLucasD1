@@ -7,8 +7,10 @@ import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos
 const rutas: Routes = [
       { path: 'listar', component: ListarCursosComponent, children: [
          { path: 'agregarcu', component: AgregarCursoComponent },
-         { path: 'editar', component: EditarCursoComponent }
-    ]}
+
+    ]},
+
+    { path: 'editar', component: EditarCursoComponent }
 ];
 
 @NgModule({

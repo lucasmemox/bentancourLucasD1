@@ -59,7 +59,7 @@ export class ListarCursosComponent implements OnInit {
   }
 
   editarCurso(curso: Curso){
-    this.router.navigate(['listar/editar', curso]);
+    this.router.navigate(['editar', curso]);
   }
 
 }
