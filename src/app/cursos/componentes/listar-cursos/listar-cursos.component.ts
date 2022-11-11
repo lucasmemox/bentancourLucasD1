@@ -54,4 +54,12 @@ export class ListarCursosComponent implements OnInit {
 
   }
 
+  eliminarCurso(id: number){
+    this.cursoService.eliminarCurso(id);
+  }
+
+  editarCurso(curso: Curso){
+    this.router.navigate(['listar/editar', curso]);
+  }
+
 }

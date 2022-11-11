@@ -31,7 +31,7 @@
       </mat-card-content>
 
       <mat-card-actions align="end">
-        <button mat-icon-button color="primario">
+        <button mat-icon-button color="primario" (click)="editarCurso(curso)">
           <mat-icon>border_color</mat-icon>
         </button>
         <button mat-icon-button color="secundario">
@@ -42,3 +42,4 @@
   </div>
 
 </div>
+<router-outlet></router-outlet>
