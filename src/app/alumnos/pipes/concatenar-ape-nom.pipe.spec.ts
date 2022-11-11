@@ -1,4 +1,4 @@
-import { ConcatenarApeNomPipe } from './concatenar-ape-nom.pipe';
+import { ConcatenarApeNomPipe } from '../../cursos/pipes/concatenar-ape-nom.pipe';
 
 describe('ConcatenarApeNomPipe', () => {
   it('create an instance', () => {

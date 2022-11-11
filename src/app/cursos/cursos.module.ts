@@ -4,7 +4,6 @@ import { CursosRoutingModule } from './cursos-routing.module';
 import { MaterialModule } from '../material.module';
 import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
 import { FiltroCursosPipe } from './pipes/filtro-cursos.pipe';
-import { ConcatenarApeNomPipe } from '../alumnos/pipes/concatenar-ape-nom.pipe';
 import { EstiloBoleanoDirective } from './directivas/estilo-boleano.directive';
 import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos.component';
 import { AgregarCursoComponent } from './componentes/agregar-curso/agregar-curso.component';
@@ -17,7 +16,6 @@ import { SharedModule } from '../shared/shared.module';
     ListarCursosComponent,
     BooleanoTextoPipe,
     FiltroCursosPipe,
-    ConcatenarApeNomPipe,
     EstiloBoleanoDirective,
     AgregarCursoComponent,
     EditarCursoComponent
