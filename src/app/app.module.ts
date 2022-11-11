@@ -8,11 +8,8 @@ import { AppRoutingModule } from './app.routing.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { CursosModule } from './cursos/cursos.module';
-// import { StudentComponent } from './componentes/student/student.component';
-// import { FormularioAlumnoComponent } from './componentes/formulario-alumno/formulario-alumno.component';
-// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { MaterialModule } from './material.module';
 import { FooterComponent } from './core/componentes/footer/footer.component';
+import { AlumnosModule } from './alumnos/alumnos.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +23,7 @@ import { FooterComponent } from './core/componentes/footer/footer.component';
     BrowserAnimationsModule,
     CoreModule,
     CursosModule,
+    // AlumnosModule,
     SharedModule,
     AppRoutingModule
   ],

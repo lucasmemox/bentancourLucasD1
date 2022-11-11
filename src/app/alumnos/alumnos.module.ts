@@ -4,12 +4,16 @@ import { SharedModule } from '../shared/shared.module';
 import { AlumnosRoutingModule } from './alumnos-routing.module';
 import { ConcatenarApeNomPipe } from './pipes/concatenar-ape-nom.pipe';
 import { CabeceraTextoDirective } from './directivas/cabecera-texto.directive';
+import { StudentComponent } from './componentes/student/student.component';
+import { FormularioAlumnoComponent } from './componentes/formulario-alumno/formulario-alumno.component';
 
 
 @NgModule({
   declarations: [
     ConcatenarApeNomPipe,
-    CabeceraTextoDirective
+    CabeceraTextoDirective,
+    StudentComponent
+    // FormularioAlumnoComponent
   ],
   imports: [
     CommonModule,
