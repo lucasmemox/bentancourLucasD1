@@ -71,12 +71,9 @@ export class StudentComponent implements OnInit {
     });
   }
 
-  editar(alumno: Alumno){
+  editarAlumno(alumno: Alumno){
     this.router.navigate(['editaralu', alumno]);
   }
 
-}
-function editar(alumno: any, Alumno: any) {
-  throw new Error('Function not implemented.');
 }
 
