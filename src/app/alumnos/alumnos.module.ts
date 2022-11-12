@@ -6,6 +6,7 @@ import { CabeceraTextoDirective } from './directivas/cabecera-texto.directive';
 import { StudentComponent } from './componentes/student/student.component';
 import { FormularioAlumnoComponent } from './componentes/formulario-alumno/formulario-alumno.component';
 import { ConcatenarApeNomPipe } from '../cursos/pipes/concatenar-ape-nom.pipe';
+import { EditarAlumnoComponent } from './componentes/editar-alumno/editar-alumno.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ConcatenarApeNomPipe } from '../cursos/pipes/concatenar-ape-nom.pipe';
     ConcatenarApeNomPipe,
     CabeceraTextoDirective,
     StudentComponent,
-    FormularioAlumnoComponent
+    FormularioAlumnoComponent,
+    EditarAlumnoComponent
   ],
   imports: [
     CommonModule,
