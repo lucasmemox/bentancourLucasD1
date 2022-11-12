@@ -58,12 +58,12 @@ export class EditarAlumnoComponent implements OnInit {
 
        this.alumnoService.editarAlumno(alumnoEditado);
 
-       this.router.navigate(['alumnos/listar']);
+       this.router.navigate(['alumnos']);
   }
 
   cancelar()
   {
-    this.router.navigate(['alumnos/listar']);
+    this.router.navigate(['editaralu']);
   }
 
 }

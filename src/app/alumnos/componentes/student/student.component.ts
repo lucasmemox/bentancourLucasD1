@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Alumno } from 'src/app/alumnos/models/alumno';
-import { Datos } from '../../datos/alumnos';
+import { Alumno } from '../../models/alumno'
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { AlumnoService } from 'src/app/alumnos/servicios/alumno.service';
 import { FormularioAlumnoComponent } from '../formulario-alumno/formulario-alumno.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student',
@@ -21,7 +21,7 @@ export class StudentComponent implements OnInit {
   dataSource!: MatTableDataSource<Alumno>;
   suscripcion: any;
 
-  constructor(private dialog: MatDialog, private alumnoService :  AlumnoService) { }
+  constructor(private dialog: MatDialog, private alumnoService :  AlumnoService, private router: Router) { }
 
   ngOnInit(): void {
     this.suscripcion = this.alumnoService.obtenerAlumnos().subscribe(datos =>{
@@ -56,8 +56,7 @@ export class StudentComponent implements OnInit {
 
     });
 
-
-    dialog.beforeClosed().subscribe(res => {
+   dialog.beforeClosed().subscribe(res => {
       //console.log(res);
       if(res != null || res != undefined)
       {
@@ -71,4 +70,13 @@ export class StudentComponent implements OnInit {
       }
     });
   }
+
+  editar(alumno: Alumno){
+    this.router.navigate(['editaralu', alumno]);
+  }
+
 }
+function editar(alumno: any, Alumno: any) {
+  throw new Error('Function not implemented.');
+}
+
