@@ -11,9 +11,9 @@
 <div class="alternativo">
   <table mat-table [dataSource]="dataSource" class="mat-table-primary mat-table-hover col-md-12">
     <ng-container matColumnDef="nombre">
-      <th mat-header-cell *matHeaderCellDef appCabeceraLetra>Alumno</th>
-      <td mat-cell *matCellDef="let alumno">{{ alumno }}</td>
-      <!-- <td mat-cell *matCellDef="let alumno">{{ alumno | concatenarApeNom }}</td> -->
+      <th mat-header-cell *matHeaderCellDef appCabeceraTexto>Alumno</th>
+      <!-- <td mat-cell *matCellDef="let alumno">{{ alumno }}</td> -->
+      <td mat-cell *matCellDef="let alumno">{{ alumno | concatenarApeNom }}</td>
     </ng-container>
 
     <!-- 'apellido' -->
@@ -24,26 +24,26 @@
 
     <!-- 'profesor' -->
     <ng-container matColumnDef="curso">
-      <th mat-header-cell *matHeaderCellDef appCabeceraLetra>Curso</th>
+      <th mat-header-cell *matHeaderCellDef appCabeceraTexto>Curso</th>
       <td mat-cell *matCellDef="let alumno">{{ alumno.curso }}</td>
     </ng-container>
 
     <!-- 'fechaInicio' -->
     <ng-container matColumnDef="edad">
-      <th mat-header-cell *matHeaderCellDef appCabeceraLetra>Edad</th>
+      <th mat-header-cell *matHeaderCellDef appCabeceraTexto>Edad</th>
       <td mat-cell *matCellDef="let alumno">{{ alumno.edad }}</td>
     </ng-container>
 
     <!-- 'fechaFin' -->
     <ng-container matColumnDef="dni">
-      <th mat-header-cell *matHeaderCellDef appCabeceraLetra>DNI</th>
+      <th mat-header-cell *matHeaderCellDef appCabeceraTexto>DNI</th>
       <td mat-cell *matCellDef="let alumno">{{ alumno.dni }}</td>
     </ng-container>
 
 
     <!-- 'acciones' -->
     <ng-container matColumnDef="acciones">
-      <th mat-header-cell *matHeaderCellDef appCabeceraLetra>Operación</th>
+      <th mat-header-cell *matHeaderCellDef appCabeceraTexto>Operación</th>
       <td mat-cell *matCellDef="let alumno">
         <button mat-icon-button>
           <mat-icon>border_color</mat-icon>
