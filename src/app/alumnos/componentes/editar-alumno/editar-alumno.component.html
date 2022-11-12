@@ -4,14 +4,14 @@
     <div class="row">
         <div class="col-md-4">
             <mat-form-field appearance="fill" class="fill">
-                <mat-label>Nombre del alumno</mat-label>
+                <mat-label>Nombre:</mat-label>
                 <input matInput formControlName="nombre">
             </mat-form-field>
         </div>
 
         <div class="col-md-4">
             <mat-form-field appearance="fill" class="fill">
-                <mat-label>Apellido del alumno</mat-label>
+                <mat-label>Apellido:</mat-label>
                 <input matInput formControlName="apellido">
             </mat-form-field>
         </div>
@@ -29,23 +29,21 @@
 
         <div class="col-md-4">
             <mat-form-field appearance="fill" class="fill">
-                <mat-label>Edad del alumno</mat-label>
+                <mat-label>Edad:</mat-label>
                 <input matInput formControlName="edad">
             </mat-form-field>
         </div>
 
         <div class="col-md-4">
             <mat-form-field appearance="fill" class="fill">
-                <mat-label>DNI del alumno</mat-label>
+                <mat-label>DNI:</mat-label>
                 <input matInput formControlName="dni">
             </mat-form-field>
         </div>
 
-
-
         <div class="col-md-12">
-            <button mat-raised-button color="warn" class="fill" (click)="cancelar()">Cancelar Edición</button>
-            <button mat-raised-button color="primary" type="submit" class="fill">Editar Alumno</button>
+            <button mat-raised-button color="warn" class="fill" (click)="cancelar()">Cancelar</button>
+            <button mat-raised-button color="primary" type="submit" class="fill">Guardar</button>
         </div>
     </div>
 </form>
