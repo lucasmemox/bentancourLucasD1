@@ -21,9 +21,6 @@ import { EditarAlumnoComponent } from './componentes/editar-alumno/editar-alumno
     CommonModule,
     AlumnosRoutingModule,
     SharedModule
-  ],
-  // providers:[
-  //   CursoService
-  // ]
+  ]
 })
 export class AlumnosModule { }
