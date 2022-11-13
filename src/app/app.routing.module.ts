@@ -11,7 +11,7 @@ const rutas: Routes = [
   { path: 'quienes-somos', component: QuienesSomosComponent },
   { path: '', redirectTo: 'inicio', pathMatch: 'full'},
   { path: '**', component: PaginaNoEncontradaComponent }
-]
+] 
 
 @NgModule({
   imports: [ RouterModule.forRoot(rutas)],

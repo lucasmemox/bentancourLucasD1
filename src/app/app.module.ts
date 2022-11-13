@@ -10,13 +10,15 @@ import { CoreModule } from './core/core.module';
 import { CursosModule } from './cursos/cursos.module';
 import { FooterComponent } from './core/componentes/footer/footer.component';
 import { AlumnosModule } from './alumnos/alumnos.module';
+import { LoginComponent } from './identificarme/componentes/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
