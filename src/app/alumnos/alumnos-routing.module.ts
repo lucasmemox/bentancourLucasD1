@@ -5,7 +5,7 @@ import { StudentComponent } from './componentes/student/student.component';
 import { EditarAlumnoComponent } from './componentes/editar-alumno/editar-alumno.component';
 
 const rutas: Routes = [
-      { path: 'alumnos', component: StudentComponent, children: [
+      { path: '', component: StudentComponent, children: [
           { path: 'agregaralu', component: FormularioAlumnoComponent }
  ]},
      { path: 'editaralu', component: EditarAlumnoComponent }

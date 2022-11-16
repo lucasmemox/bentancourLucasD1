@@ -5,7 +5,7 @@ import { EditarCursoComponent } from './componentes/editar-curso/editar-curso.co
 import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos.component';
 
 const rutas: Routes = [
-      { path: 'listar', component: ListarCursosComponent, children: [
+      { path: '', component: ListarCursosComponent, children: [
          { path: 'agregarcu', component: AgregarCursoComponent },
 
     ]},

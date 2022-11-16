@@ -17,8 +17,7 @@ import { LoginComponent } from './identificarme/componentes/login/login.componen
     AppComponent,
     NavbarComponent,
     ToolbarComponent,
-    FooterComponent,
-    LoginComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
