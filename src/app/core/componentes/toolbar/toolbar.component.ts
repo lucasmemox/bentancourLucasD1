@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Sesion } from 'src/app/identificarme/models/sesion';
+import { SesionService } from '../../servicios/sesion.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  sesion$!: Observable<Sesion>;
+
+  constructor(
+    private sesionService: SesionService
+  ) { }
 
   ngOnInit(): void {
+    this.sesion$ = this.sesionService.obtenerSesion();
   }
 
 }
