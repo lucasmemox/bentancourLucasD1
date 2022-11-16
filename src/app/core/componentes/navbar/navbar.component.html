@@ -1,3 +1,6 @@
+
+<ng-container *ngIf="sesion$ | async as sesion">
+  <div *ngIf="sesion.sesionActiva">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="assets/imagenes/logSGC.png" class="logo-imagen">
@@ -36,3 +39,5 @@
     </div>
   </div>
 </nav>
+</div>
+</ng-container>

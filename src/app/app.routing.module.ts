@@ -9,8 +9,8 @@ import { IdentificarmeModule } from './identificarme/identificarme.module';
 
 const rutas: Routes = [
   { path: 'inicio', component: InicioComponent, canActivate: [IdentificarmeGuard] },
-  { path: 'contacto', component: ContactoComponent },
-  { path: 'quienes-somos', component: QuienesSomosComponent },
+  { path: 'contacto', component: ContactoComponent, canActivate: [IdentificarmeGuard] },
+  { path: 'quienes-somos', component: QuienesSomosComponent, canActivate: [IdentificarmeGuard] },
 
   { path: 'cursos', loadChildren: () =>import('./cursos/cursos.module').then((m)=> m.CursosModule), canActivate:[IdentificarmeGuard]},
     { path: 'alumnos', loadChildren: ()=>import('./alumnos/alumnos.module').then((m)=>m.AlumnosModule), canActivate:[IdentificarmeGuard]},
