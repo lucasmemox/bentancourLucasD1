@@ -24,11 +24,10 @@ const rutas: Routes = [
     component: QuienesSomosComponent,
     canActivate: [IdentificarmeGuard],
   },
-
   {
-    path: 'cursos',
+    path: 'listar',
     loadChildren: () =>
-      import('./cursos/cursos.module').then((m) => m.CursosModule),
+    import('./cursos/cursos.module').then((m) => m.CursosModule),
     canActivate: [IdentificarmeGuard],
   },
   {
