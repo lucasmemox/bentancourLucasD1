@@ -1,23 +1,23 @@
-<p>Identificarse</p>
-<div class="center">
+<h1 class="alinearTexto colorFooter">Identificarse</h1>
+<div class="col-auto bg-secondary p-5 text-center">
   <form [formGroup]="formulario" (ngSubmit)="login()">
-    <div class="row">
-        <div class="col-md-4">
+    <div class="row align-self-center">
+        <div class="col-md-12 align-self-center">
             <mat-form-field appearance="fill" class="fill">
                 <mat-label>Usuario</mat-label>
                 <input matInput formControlName="usuario">
             </mat-form-field>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-12 align-self-center">
             <mat-form-field appearance="fill" class="fill">
                 <mat-label>Clave</mat-label>
                 <input matInput formControlName="clave">
             </mat-form-field>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-12 align-self-center">
             <mat-slide-toggle formControlName="admin">Es admin</mat-slide-toggle>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-12 align-self-center">
             <button type="submit" [disabled]="formulario.invalid" mat-raised-button color="primary">Ingresar</button>
         </div>
     </div>

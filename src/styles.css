@@ -114,3 +114,11 @@ body {
         /*Separación entre lineas de un párrafo*/
 
     }
+
+    .alinearTexto{
+      text-align: center;
+    }
+
+    .colorFooter{
+      color: #18bc9c;;
+    }
