@@ -5,8 +5,6 @@ import { InicioComponent } from './core/componentes/inicio/inicio.component';
 import { PaginaNoEncontradaComponent } from './core/componentes/pagina-no-encontrada/pagina-no-encontrada.component';
 import { QuienesSomosComponent } from './core/componentes/quienes-somos/quienes-somos.component';
 import { IdentificarmeGuard } from './core/guards/identificarme.guard';
-import { EditarCursoComponent } from './cursos/componentes/editar-curso/editar-curso.component';
-import { IdentificarmeModule } from './identificarme/identificarme.module';
 
 const rutas: Routes = [
   {

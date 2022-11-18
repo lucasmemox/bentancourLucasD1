@@ -1,8 +1,8 @@
 <ng-container *ngIf="sesion$ | async as sesion">
   <div class="d-grid gap-2" *ngIf="sesion.sesionActiva">
-    <button class="btn btn-lg btn-primary" type="button" routerLink="alumnos">Alumnos </button>
+    <button class="btn btn-lg btn-primary" type="button" routerLink="/alumnos">Alumnos </button>
     <button class="btn btn-lg btn-primary" type="button">Clases</button>
-    <button class="btn btn-lg btn-primary" type="button" routerLink="listar" >Cursos</button>
+    <button class="btn btn-lg btn-primary" type="button" routerLink="/listar" >Cursos</button>
   </div>
 </ng-container>
 
