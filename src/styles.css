@@ -122,3 +122,9 @@ body {
     .colorFooter{
       color: #18bc9c;;
     }
+
+    .colWhitBG{
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
