@@ -36,7 +36,7 @@ export class CursoService {
     // return this.obtenerCursos().pipe(
     //   map((cursos: Curso[]) => cursos.filter((curso: Curso) => curso.id === id)[0])
     // )
-    return this.http.get<Curso>(`${environment.api}/usuarios/${id}`, {
+    return this.http.get<Curso>(`${environment.api}/cursos/${id}`, {
       headers: new HttpHeaders({
         'content-type': 'application/json',
         'encoding': 'UTF-8'
@@ -87,11 +87,11 @@ export class CursoService {
 
   private manejarError(error: HttpErrorResponse){
     if(error.error instanceof ErrorEvent){
-      console.warn('Error del lado del cliente', error.error.message);
+      console.warn('Error del Cliente', error.error.message);
     }else{
-      console.warn('Error del lado del servidor', error.error.message);
+      console.warn('Error del Servidor', error.error.message);
     }
-    return throwError(() => new Error('Error en la comunicacion HTTP'));
+    return throwError(() => new Error('Error en la comunicación HTTP'));
   }
 
 
