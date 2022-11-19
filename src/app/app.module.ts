@@ -7,10 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app.routing.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
-// import { CursosModule } from './cursos/cursos.module';
 import { FooterComponent } from './core/componentes/footer/footer.component';
-// import { AlumnosModule } from './alumnos/alumnos.module';
-// import { LoginComponent } from './identificarme/componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +20,6 @@ import { FooterComponent } from './core/componentes/footer/footer.component';
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,
-    // CursosModule,
-    // AlumnosModule,
     SharedModule,
     AppRoutingModule
   ],
