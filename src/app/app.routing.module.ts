@@ -29,7 +29,7 @@ const rutas: Routes = [
     canActivate: [IdentificarmeGuard],
   },
   {
-    path: 'alumnos',
+    path: 'inicioalu',
     loadChildren: () =>
       import('./alumnos/alumnos.module').then((m) => m.AlumnosModule),
     canActivate: [IdentificarmeGuard],
