@@ -23,7 +23,7 @@ const rutas: Routes = [
     canActivate: [IdentificarmeGuard],
   },
   {
-    path: 'listar',
+    path: 'iniciocur',
     loadChildren: () =>
     import('./cursos/cursos.module').then((m) => m.CursosModule),
     canActivate: [IdentificarmeGuard],

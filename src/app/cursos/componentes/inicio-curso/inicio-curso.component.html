@@ -1,0 +1,6 @@
+<div *ngIf="!mostrarLista">
+      <div *ng-init="listar()"></div>
+</div>
+<div *ngIf="mostrarLista">
+  <router-outlet></router-outlet>
+</div>

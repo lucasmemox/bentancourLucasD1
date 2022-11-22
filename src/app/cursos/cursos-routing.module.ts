@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AgregarCursoComponent } from './componentes/agregar-curso/agregar-curso.component';
 import { EditarCursoComponent } from './componentes/editar-curso/editar-curso.component';
 import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos.component';
+import { InicioCursoComponent } from './componentes/inicio-curso/inicio-curso.component';
 
 const rutas: Routes = [
-      { path: '', component: ListarCursosComponent, children: [
+      { path: '', component: InicioCursoComponent, children: [
+        { path: 'listar', component: ListarCursosComponent },
          { path: 'agregarcu', component: AgregarCursoComponent },
-    ]},
-    { path: 'editar', component: EditarCursoComponent }
+         { path: 'editarcu', component: EditarCursoComponent }
+        ]},
 ];
 
 @NgModule({

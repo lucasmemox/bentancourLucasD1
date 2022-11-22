@@ -55,10 +55,10 @@ export class EditarCursoComponent implements OnInit {
       fechaFin: this.formulario.value.fin,
       inscripcionAbierta: this.formulario.value.inscripcionAbierta,
       imagen: this.curso.imagen,
-    };
+    }
 
     this.cursoService.editarCurso(c);
 
-    this.router.navigate(['listar']);
+    this.router.navigate(['iniciocur/listar']);
   }
 }

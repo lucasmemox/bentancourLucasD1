@@ -8,6 +8,7 @@ import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos
 import { AgregarCursoComponent } from './componentes/agregar-curso/agregar-curso.component';
 import { EditarCursoComponent } from './componentes/editar-curso/editar-curso.component';
 import { SharedModule } from '../shared/shared.module';
+import { InicioCursoComponent } from './componentes/inicio-curso/inicio-curso.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
     FiltroCursosPipe,
     EstiloBoleanoDirective,
     AgregarCursoComponent,
-    EditarCursoComponent
+    EditarCursoComponent,
+    InicioCursoComponent
   ],
   imports: [
     CommonModule,
