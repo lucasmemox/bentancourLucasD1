@@ -72,7 +72,7 @@ export class StudentComponent implements OnInit {
   }
 
   editarAlumno(alumno: Alumno){
-    this.router.navigate(['editaralu', alumno]);
+    this.router.navigate(['inicioalu/editaralu', alumno]);
   }
 
 }
