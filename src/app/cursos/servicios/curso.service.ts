@@ -80,10 +80,11 @@ export class CursoService {
     // }
 
     // this.cursosSubject.next(this.cursos);
+
     this.http.delete<Curso>(`${environment.api}/cursos/${id}`).pipe(
       catchError(this.manejarError)
     ).subscribe(console.log);
-  }
+    }
 
   private manejarError(error: HttpErrorResponse){
     if(error.error instanceof ErrorEvent){
