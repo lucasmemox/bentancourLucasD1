@@ -5,8 +5,6 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { PaginaNoEncontradaComponent } from './componentes/pagina-no-encontrada/pagina-no-encontrada.component';
 import { QuienesSomosComponent } from './componentes/quienes-somos/quienes-somos.component';
 
-
-
 @NgModule({
   declarations: [
     InicioComponent,
