@@ -9,6 +9,11 @@ import { AgregarCursoComponent } from './componentes/agregar-curso/agregar-curso
 import { EditarCursoComponent } from './componentes/editar-curso/editar-curso.component';
 import { SharedModule } from '../shared/shared.module';
 import { InicioCursoComponent } from './componentes/inicio-curso/inicio-curso.component';
+import { CursoService } from './servicios/curso.service';
+import { StoreModule } from '@ngrx/store';
+import { cursosFeatureKey, reducer } from './state/cursos.reducer';
+// import { EffectsModule } from '@ngrx/effects';
+// import { CursosEffects } from '../cursos.effects';
 
 
 @NgModule({
@@ -24,10 +29,12 @@ import { InicioCursoComponent } from './componentes/inicio-curso/inicio-curso.co
   imports: [
     CommonModule,
     CursosRoutingModule,
-    SharedModule
+    SharedModule,
+    StoreModule.forFeature(cursosFeatureKey, reducer)
+    // EffectsModule.forFeature([CursosEffects])
   ],
-  // providers:[
-  //   CursoService
-  // ]
+  providers:[
+    CursoService
+  ]
 })
 export class CursosModule { }
