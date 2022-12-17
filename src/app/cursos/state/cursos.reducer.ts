@@ -5,35 +5,32 @@ import { CursoState } from '../models/curso.state';
 export const cursosFeatureKey = 'cursos';
 
 
-export const initialState: CursoState = {
+export const estadoInicial: CursoState = {
     cargando: false,
     cursos: []
 };
 
 export const reducer = createReducer(
-  initialState,
+  estadoInicial,
 
-  on(CursosActions.loadCursoss, (state) => {
+  on(CursosActions.loadCursos, (state) => {
     return {...state, cargando: true};
   }),
-  on(CursosActions.loadCursossSuccess, (state, {cursos}) => {
+  on(CursosActions.loadCursosSuccess, (state, {cursos}) => {
     return {...state, cargando: false, cursos}
   }),
-  on(CursosActions.loadCursossFailure, (state, {error}) => {
+  on(CursosActions.loadCursosFailure, (state, {error}) => {
     return state
   }),
-  // on(CursosActions.agregarCurso, (state, {curso}) => {
-  //   return state
-  // }),
-  // on(CursosActions.editarCurso, (state, {curso}) => {
-  //   return state
-  // }),
-  // on(CursosActions.editarCurso, (state, {curso}) => {
-  //   return state
-  // }),
-  // on(CursosActions.eliminarCurso, (state, {curso}) => {
-  //   return state
-  // }),
+  on(CursosActions.agregarCurso, (state, {curso}) => {
+    return state
+  }),
+  on(CursosActions.editarCurso, (state, {curso}) => {
+    return state
+  }),
+  on(CursosActions.eliminarCurso, (state, {curso}) => {
+    return state
+  }),
 
 
 );

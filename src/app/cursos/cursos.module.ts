@@ -4,7 +4,7 @@ import { CursosRoutingModule } from './cursos-routing.module';
 import { BooleanoTextoPipe } from './pipes/booleano-texto.pipe';
 import { FiltroCursosPipe } from './pipes/filtro-cursos.pipe';
 import { EstiloBoleanoDirective } from './directivas/estilo-boleano.directive';
-import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos.component';
+import { ListarCursosComponent as ListerCursosComponent } from './componentes/listar-cursos/listar-cursos.component';
 import { AgregarCursoComponent } from './componentes/agregar-curso/agregar-curso.component';
 import { EditarCursoComponent } from './componentes/editar-curso/editar-curso.component';
 import { SharedModule } from '../shared/shared.module';
@@ -18,7 +18,7 @@ import { cursosFeatureKey, reducer } from './state/cursos.reducer';
 
 @NgModule({
   declarations: [
-    ListarCursosComponent,
+    ListerCursosComponent,
     BooleanoTextoPipe,
     FiltroCursosPipe,
     EstiloBoleanoDirective,
@@ -30,7 +30,7 @@ import { cursosFeatureKey, reducer } from './state/cursos.reducer';
     CommonModule,
     CursosRoutingModule,
     SharedModule,
-    StoreModule.forFeature(cursosFeatureKey, reducer)
+    StoreModule.forFeature(cursosFeatureKey,reducer)
     // EffectsModule.forFeature([CursosEffects])
   ],
   providers:[

@@ -14,6 +14,7 @@ export class InicioCursoComponent implements OnInit {
     this.router.navigate(['iniciocur/listar']);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
 }

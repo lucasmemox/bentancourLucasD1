@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, catchError, map, Observable, throwError } from 'rxjs';
+import { BehaviorSubject, catchError, concatMap, map, Observable, throwError } from 'rxjs';
 import { Curso } from '../models/curso';
 import { Datos } from '../datos/cursos';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
@@ -81,9 +81,13 @@ export class CursoService {
 
     // this.cursosSubject.next(this.cursos);
 
-    this.http.delete<Curso>(`${environment.api}/cursos/${id}`).pipe(
-      catchError(this.manejarError)
-    ).subscribe(console.log);
+    // this.http.delete<Curso>(`${environment.api}/cursos/${id}`).pipe(
+    //   catchError(this.manejarError)
+    // ).subscribe(console.log);
+
+    return this.http
+    .delete<Curso>(`${environment.api}/curso/${id}`)
+    .pipe(concatMap(() => this.obtenerCursos()));
     }
 
   private manejarError(error: HttpErrorResponse){
