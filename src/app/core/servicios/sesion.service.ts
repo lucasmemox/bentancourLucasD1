@@ -16,16 +16,16 @@ export class SesionService {
     this.sesionSubject = new BehaviorSubject(sesion);
   }
 
-  login(usuario: string, clave: string, admin: boolean){
+  login(usuario: string, contrasena: string, admin: boolean, id: number){
     const sesion: Sesion = {
       sesionActiva: true,
       usuarioActivo: {
+        id: id,
         usuario: usuario,
-        clave: clave,
-        admin: admin
-      }
-    }
-
+        contrasena: contrasena,
+        admin: admin,
+      },
+    };
     this.sesionSubject.next(sesion);
   }
 
