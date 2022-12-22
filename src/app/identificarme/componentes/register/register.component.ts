@@ -53,7 +53,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
     };
 
     this.usuarioService.agregarUsuario(usuario);
-    this.router.navigate(['/login']);
+    this.router.navigate(['autenticacion/login']);
   }
 
   validacionRegistro() {

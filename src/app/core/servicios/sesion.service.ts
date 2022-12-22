@@ -39,4 +39,8 @@ export class SesionService {
   obtenerSesion(): Observable<Sesion>{
     return this.sesionSubject.asObservable();
   }
+
+  obtenerDatosSesion(): Observable<Sesion> {
+    return this.sesionSubject.asObservable();
+  }
 }
