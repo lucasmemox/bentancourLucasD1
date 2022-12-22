@@ -20,7 +20,8 @@ export class IdentificarmeGuard implements CanActivate {
           if(sesion.sesionActiva){
             return true;
           }else{
-            this.router.navigate(['autenticacion/login']);
+            // this.router.navigate(['autenticacion/login']);
+             this.router.navigate(['register']);
             return false;
           }
         })
