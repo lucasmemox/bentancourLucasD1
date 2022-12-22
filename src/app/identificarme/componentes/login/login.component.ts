@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit, OnDestroy{
   ) {
     this.formulario = new FormGroup({
       usuario: new FormControl('', [Validators.email, Validators.required]),
-      clave: new FormControl('',[Validators.required]),
+      contrasena: new FormControl('',[Validators.required]),
     })
   }
 
