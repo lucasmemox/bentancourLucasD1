@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit, OnDestroy{
           encontrarUsuario.admin,
           encontrarUsuario.id
         );
-        this.router.navigate(['/students/alta-alumno']);
+        this.router.navigate(['inicio']);
       } else {
         Swal.fire({
           position: 'center',

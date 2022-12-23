@@ -12,29 +12,29 @@ const rutas: Routes = [
   {
     path: 'inicio',
     component: InicioComponent,
-    canActivate: [IdentificarmeGuard],
+    canActivate: [IdentificarmeGuard]
   },
   {
     path: 'contacto',
     component: ContactoComponent,
-    canActivate: [IdentificarmeGuard],
+    canActivate: [IdentificarmeGuard]
   },
   {
     path: 'quienes-somos',
     component: QuienesSomosComponent,
-    canActivate: [IdentificarmeGuard],
+    canActivate: [IdentificarmeGuard]
   },
   {
     path: 'iniciocur',
     loadChildren: () =>
     import('./cursos/cursos.module').then((m) => m.CursosModule),
-    canActivate: [IdentificarmeGuard],
+    canActivate: [IdentificarmeGuard]
   },
   {
     path: 'inicioalu',
     loadChildren: () =>
       import('./alumnos/alumnos.module').then((m) => m.AlumnosModule),
-    canActivate: [IdentificarmeGuard],
+    canActivate: [IdentificarmeGuard]
   },
   {
     path: 'autenticacion',
