@@ -72,23 +72,30 @@ export class CursoService {
     ).subscribe(console.log);
   }
 
-  eliminarCurso(id: number){
-    // let indice = this.cursos.findIndex((c: Curso) => c.id === id);
+  // eliminarCurso(id: number){
+  //   // let indice = this.cursos.findIndex((c: Curso) => c.id === id);
 
-    // if(indice > -1){
-    //   this.cursos.splice(indice, 1);
-    // }
+  //   // if(indice > -1){
+  //   //   this.cursos.splice(indice, 1);
+  //   // }
 
-    // this.cursosSubject.next(this.cursos);
+  //   // this.cursosSubject.next(this.cursos);
 
-    // this.http.delete<Curso>(`${environment.api}/cursos/${id}`).pipe(
-    //   catchError(this.manejarError)
-    // ).subscribe(console.log);
+  //   // this.http.delete<Curso>(`${environment.api}/cursos/${id}`).pipe(
+  //   //   catchError(this.manejarError)
+  //   // ).subscribe(console.log);
 
+  //   return this.http
+  //   .delete<Curso>(`${environment.api}/curso/${id}`)
+  //   .pipe(concatMap(() => this.obtenerCursos()));
+  //   }
+
+  eliminarCurso(id: number) {
     return this.http
-    .delete<Curso>(`${environment.api}/curso/${id}`)
-    .pipe(concatMap(() => this.obtenerCursos()));
-    }
+      .delete<Curso>(`${environment.api}/curso/${id}`)
+      .pipe(concatMap(() => this.obtenerCursos()));
+  }
+
 
   private manejarError(error: HttpErrorResponse){
     if(error.error instanceof ErrorEvent){

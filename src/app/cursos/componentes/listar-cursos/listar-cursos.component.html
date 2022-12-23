@@ -34,7 +34,7 @@
         <button mat-icon-button color="primario" (click)="editarCurso(curso)" *ngIf="sesion.usuarioActivo?.admin">
           <mat-icon>border_color</mat-icon>
         </button>
-        <button mat-icon-button color="secundario" (click)="eliminarCurso(curso)">
+        <button mat-icon-button color="secundario" (click)="eliminarCurso(curso)" *ngIf="sesion.usuarioActivo?.admin">
           <mat-icon>delete_forever</mat-icon>
         </button>
       </mat-card-actions>
