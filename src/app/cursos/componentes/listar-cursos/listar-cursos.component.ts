@@ -9,6 +9,8 @@ import { CursoState } from '../../models/curso.state';
 import { loadCursos, eliminarCurso } from '../../state/cursos.actions';
 import { selectCursos } from '../../state/cursos.selectors';
 import { Store } from '@ngrx/store';
+import { Sesion } from 'src/app/identificarme/models/sesion';
+import { SesionService } from 'src/app/core/servicios/sesion.service';
 
 @Component({
   selector: 'app-cursos',
@@ -22,14 +24,18 @@ export class ListarCursosComponent implements OnInit , OnDestroy {
   deshabilitado: boolean = false;
 
   nameUsuario!: any;
-  
+
+  sesion!: Sesion;
   sesionSubcription!: Subscription;
+  sesion$!: Observable<Sesion>;
 
   constructor(private dialog: MatDialog,
               private cursoService: CursoService,
               private router: Router,
+              private sesionService: SesionService,
               private store: Store<CursoState>
               ) { }
+
   ngOnDestroy(): void {
     this.sesionSubcription.unsubscribe();
   }
@@ -39,7 +45,13 @@ export class ListarCursosComponent implements OnInit , OnDestroy {
 
     this.cursos$ = this.store.select(selectCursos);
 
+    this.sesion$ = this.sesionService.obtenerDatosSesion();
+
     this.store.dispatch(loadCursos());
+
+    this.sesionSubcription = this.sesion$.subscribe(
+      (sesion) => (this.sesion = sesion)
+    );
   }
 
   filtrarCurso(event: Event){
