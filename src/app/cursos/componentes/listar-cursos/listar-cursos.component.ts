@@ -19,7 +19,7 @@ import { SesionService } from 'src/app/core/servicios/sesion.service';
 })
 export class ListarCursosComponent implements OnInit , OnDestroy {
 
-  cursos$!: Observable<Curso[]>
+  cursos$!: Observable<Curso[]>;
 
   deshabilitado: boolean = false;
 
@@ -41,8 +41,8 @@ export class ListarCursosComponent implements OnInit , OnDestroy {
   }
 
   ngOnInit(): void {
-    // this.cursos$ = this.cursoService.obtenerCursos();
-
+    this.cursos$ = this.cursoService.obtenerCursos();
+    
     this.cursos$ = this.store.select(selectCursos);
 
     this.sesion$ = this.sesionService.obtenerDatosSesion();

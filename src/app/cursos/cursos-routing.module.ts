@@ -6,10 +6,8 @@ import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos
 import { InicioCursoComponent } from './componentes/inicio-curso/inicio-curso.component';
 
 const rutas: Routes = [
-      // { path: '',
-      //   //  component: InicioCursoComponent,
-      //    children: [
-          { path: '', component: InicioCursoComponent, children: [
+      { path: '', children: [
+          // { path: '', component: InicioCursoComponent, children: [
           { path: 'listar', component: ListarCursosComponent },
          { path: 'agregarcu', component: AgregarCursoComponent },
          { path: 'editarcu', component: EditarCursoComponent }

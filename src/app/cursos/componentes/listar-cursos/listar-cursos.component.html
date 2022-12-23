@@ -1,45 +1,49 @@
 <p>Cursos de Cursalia</p>
-
-<div class="row">
-  <mat-form-field class="col-md-6">
-    <mat-label>Filtro Curso</mat-label>
-    <input type="text" matInput (keyup)="filtrarCurso($event)">
-  </mat-form-field>
-</div>
-
-<div class="btn-altacur">
-  <button mat-raised-button (click)="openDialog()" type="button" class="btn btn-primary">Agregar Curso</button>
-</div>
-
-<div class="row">
-
-  <div *ngFor="let curso of cursos$ | async" class="col-md-4">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>{{curso.nombre}}</mat-card-title>
-        <mat-card-subtitle>{{curso.comision}}</mat-card-subtitle>
-      </mat-card-header>
-
-      <img mat-card-image [src]="curso.imagen" alt="Cursalia">
-
-      <mat-card-content>
-        <p>Profesor: {{curso.profesor}}</p>
-        <p>Comienza: {{curso.fechaInicio | date: 'dd/MM/YYYY'}}</p>
-        <p>Finaliza: {{curso.fechaFin | date: 'dd/MM/YYYY'}}</p>
-        <p [appEstiloBoleano]="curso.inscripcionAbierta"> Finalizado: {{curso.inscripcionAbierta | booleanoTexto: 'SI':
-          'NO'}}</p>
-      </mat-card-content>
-
-      <mat-card-actions align="end">
-        <button mat-icon-button color="primario" (click)="editarCurso(curso)" *ngIf="sesion.usuarioActivo?.admin">
-          <mat-icon>border_color</mat-icon>
-        </button>
-        <button mat-icon-button color="secundario" (click)="eliminarCurso(curso)" *ngIf="sesion.usuarioActivo?.admin">
-          <mat-icon>delete_forever</mat-icon>
-        </button>
-      </mat-card-actions>
-    </mat-card>
+<div class="container-courses ">
+  <div class="row">
+    <mat-form-field class="col-md-6">
+      <mat-label>Filtro Curso</mat-label>
+      <input type="text" matInput (keyup)="filtrarCurso($event)">
+    </mat-form-field>
   </div>
 
+  <div class="btn-altacur">
+    <button mat-raised-button (click)="openDialog()" type="button" class="btn btn-primary">Agregar Curso</button>
+  </div>
+
+  <div class="container-cards-courses">
+    <div class="row cards-courses">
+
+      <div *ngFor="let curso of cursos$ | async" class="col-md-4">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{curso.nombre}}</mat-card-title>
+            <mat-card-subtitle>{{curso.comision}}</mat-card-subtitle>
+          </mat-card-header>
+
+          <img mat-card-image [src]="curso.imagen" alt="Cursalia">
+
+          <mat-card-content>
+            <p>Profesor: {{curso.profesor}}</p>
+            <p>Comienza: {{curso.fechaInicio | date: 'dd/MM/YYYY'}}</p>
+            <p>Finaliza: {{curso.fechaFin | date: 'dd/MM/YYYY'}}</p>
+            <p [appEstiloBoleano]="curso.inscripcionAbierta"> Finalizado: {{curso.inscripcionAbierta | booleanoTexto:
+              'SI':
+              'NO'}}</p>
+          </mat-card-content>
+
+          <mat-card-actions align="end">
+            <button mat-icon-button color="primario" (click)="editarCurso(curso)" *ngIf="sesion.usuarioActivo?.admin">
+              <mat-icon>border_color</mat-icon>
+            </button>
+            <button mat-icon-button color="secundario" (click)="eliminarCurso(curso)"
+              *ngIf="sesion.usuarioActivo?.admin">
+              <mat-icon>delete_forever</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
 </div>
 <router-outlet></router-outlet>

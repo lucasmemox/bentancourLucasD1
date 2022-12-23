@@ -12,8 +12,8 @@ import { InicioCursoComponent } from './componentes/inicio-curso/inicio-curso.co
 import { CursoService } from './servicios/curso.service';
 import { StoreModule } from '@ngrx/store';
 import { cursosFeatureKey, reducer } from './state/cursos.reducer';
-// import { EffectsModule } from '@ngrx/effects';
-// import { CursosEffects } from '../cursos.effects';
+import { EffectsModule } from '@ngrx/effects';
+import { CursosEffects } from './state/cursos.effects';
 
 
 @NgModule({
@@ -30,8 +30,8 @@ import { cursosFeatureKey, reducer } from './state/cursos.reducer';
     CommonModule,
     CursosRoutingModule,
     SharedModule,
-    StoreModule.forFeature(cursosFeatureKey,reducer)
-    // EffectsModule.forFeature([CursosEffects])
+    StoreModule.forFeature(cursosFeatureKey,reducer),
+    EffectsModule.forFeature([CursosEffects])
   ],
   providers:[
     CursoService
