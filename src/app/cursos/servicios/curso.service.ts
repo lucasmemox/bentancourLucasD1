@@ -60,11 +60,6 @@ export class CursoService {
   }
 
   editarCurso(curso: Curso){
-    // let indice = this.cursos.findIndex((c: Curso) => c.id === curso.id);
-
-    // if(indice > -1){
-    //   this.cursos[indice] = curso;
-    // }
 
     // this.cursosSubject.next(this.cursos);
     this.http.put<Curso>(`${environment.api}/cursos/${curso.id}`, curso).pipe(
@@ -72,27 +67,9 @@ export class CursoService {
     ).subscribe(console.log);
   }
 
-  // eliminarCurso(id: number){
-  //   // let indice = this.cursos.findIndex((c: Curso) => c.id === id);
-
-  //   // if(indice > -1){
-  //   //   this.cursos.splice(indice, 1);
-  //   // }
-
-  //   // this.cursosSubject.next(this.cursos);
-
-  //   // this.http.delete<Curso>(`${environment.api}/cursos/${id}`).pipe(
-  //   //   catchError(this.manejarError)
-  //   // ).subscribe(console.log);
-
-  //   return this.http
-  //   .delete<Curso>(`${environment.api}/curso/${id}`)
-  //   .pipe(concatMap(() => this.obtenerCursos()));
-  //   }
-
   eliminarCurso(id: number) {
     return this.http
-      .delete<Curso>(`${environment.api}/curso/${id}`)
+      .delete<Curso>(`${environment.api}/cursos/${id}`)
       .pipe(concatMap(() => this.obtenerCursos()));
   }
 
