@@ -6,6 +6,7 @@ import { PaginaNoEncontradaComponent } from './core/componentes/pagina-no-encont
 import { QuienesSomosComponent } from './core/componentes/quienes-somos/quienes-somos.component';
 import { IdentificarmeGuard } from './core/guards/identificarme.guard';
 import { RegisterComponent } from './identificarme/componentes/register/register.component';
+import { LoginComponent } from './identificarme/componentes/login/login.component';
 
 const rutas: Routes = [
   {
@@ -42,8 +43,8 @@ const rutas: Routes = [
         (m) => m.IdentificarmeModule
       ),
   },
-  {path: 'register', component: RegisterComponent},
-  
+  { path: 'register', component: RegisterComponent},
+  // { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: '**', component: PaginaNoEncontradaComponent },
 ];
