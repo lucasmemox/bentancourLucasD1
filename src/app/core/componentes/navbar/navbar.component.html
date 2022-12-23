@@ -21,22 +21,12 @@
             <li class="nav-item">
               <a class="nav-link" routerLink="quienes-somos">Quienes Somos</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                aria-expanded="false">Cursa</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">ABM Comisiones</a>
-                <a class="dropdown-item" href="#">Inscripción a Cursadas</a>
-                <a class="dropdown-item" href="#">Baja de Inscripción a Cursadas</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Reportes</a>
-              </div>
-            </li> -->
           </ul>
           <form class="d-flex">
-            <input class="form-control me-sm-2" type="text" placeholder="buscar">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
-          </form>
+             <span class="btn btn-secondary" *ngIf="sesion.usuarioActivo">{{
+              sesion.usuarioActivo.usuario
+            }}</span>
+            </form>
         </div>
         <div>
           <div class="sepSesion">
